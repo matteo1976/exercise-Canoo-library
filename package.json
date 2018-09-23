@@ -2,7 +2,7 @@
   "name": "canoolibrary",
   "version": "1.0.0",
   "description": "test for web developer application",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,7 +16,7 @@
     "url": "https://github.com/matteo1976/exercise-Canoo-library/issues"
   },
   "homepage": "https://github.com/matteo1976/exercise-Canoo-library#readme",
-"dependencies": {
+  "dependencies": {
     "@angular/cli": "^6.2.3",
     "express": "^4.16.3"
   }
