@@ -1,0 +1,20 @@
+{
+    "users": [
+        {
+            "id": 0,
+            "name": "admin",
+            "idAutor": 0,
+            "permission ": "admin",
+            "login": "admin",
+            "password": "admin"
+        },
+        {
+            "id": 1,
+            "name": "Matteo Angelotti",
+            "idAutor": 0,
+            "permission ": "autor",
+            "login": "matteo",
+            "password": "matteo"
+        }
+    ]
+}

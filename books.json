@@ -1,0 +1,50 @@
+{
+    "books": [
+        {
+            "id": 0,
+            "title": "my first book",
+            "autor": "Matteo Angelotti",
+            "idAutor": 0,
+            "pubblication": "2018.09.19",
+            "trame": "the story of life of a normal person",
+            "img": "/assets/img/bookImg.png"
+        },
+        {
+            "id": 1,
+            "title": "my second book",
+            "autor": "Matteo Angelotti",
+            "idAutor": 0,
+            "pubblication": "2018.09.19",
+            "trame": "funny moments",
+            "img": "/assets/img/secondBook.jpg"
+        },
+        {
+            "id": 2,
+            "title": "my third book",
+            "autor": "Matteo Angelotti",
+            "idAutor": 0,
+            "pubblication": "2018.09.19",
+            "trame": "try to write something",
+            "img": "/assets/img/thirdBook.jpg"
+        },
+        {
+            "id": 3,
+            "title": "my fourth book",
+            "autor": "Matteo Angelotti",
+            "idAutor": 0,
+            "pubblication": "2018.09.19",
+            "trame": "biography",
+            "img": "/assets/img/fourthbook.png"
+        },
+        {
+            "id": 4,
+            "title": "my fifth book",
+            "autor": "Matteo Angelotti",
+            "idAutor": 0,
+            "pubblication": "2018.09.19",
+            "trame": "romance",
+            "img": "/assets/img/fifth.jpg"
+        }
+
+    ]
+}
