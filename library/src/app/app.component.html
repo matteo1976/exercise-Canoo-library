@@ -1,69 +1,101 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+<!-- Main page -->
 <div class="container">
-  <div class="row">
-    <div class="col-xs-12 ">
-        <div class="pagetitle">
-          <h1>
-            Welcome to the online {{ title }}!
-          </h1>    
-          <img class="logo" src="../assets/img/library_logo_sq.png" alt="Logo" >
-      </div>
+    <div class="row">
+        <div class="col-xs-12 ">
+            <div class="pagetitle">
+                <h1>
+                    Welcome to the online {{ title }}!
+                </h1>
+                <img class="logo" src="../assets/img/library_logo_sq.png" alt="Logo">
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 
+<!-- TODO: put this controll in a component -->
 <div class="container">
-    <br/>
-	<div class="row justify-content-center">
-                        <div class="col-12 col-md-10 col-lg-8">
-                            <form class="card card-sm">
-                                <div class="card-body row no-gutters align-items-center">
-                                    <div class="col-auto">
-                                        <i class="fas fa-search h4 text-body"></i>
-                                    </div>
-                                    <!--end of col-->
-                                    <div class="col">
-                                        <!-- <input [(ngModel)]="query" class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search for title" > -->
-                                        <input type="text" [(ngModel)]="query" name="myserch" class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search for title or autor" >
-                                    </div>
-                                    <!--end of col-->
-                                    <div class="col-auto">
-                                        <button class="btn btn-lg btn-success" type="submit">Search</button>
-                                    </div>
-                                    <!--end of col-->
-                                </div>
-                            </form>
-                        </div>
-                        <!--end of col-->
+    <br />
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8">
+            <form class="card card-sm">
+                <div class="card-body row no-gutters align-items-center">
+                    <div class="col-auto">
+                        <i class="fas fa-search h4 text-body"></i>
                     </div>
-</div>
+                    <!--end of col-->
+                    <div class="col">
+                        <!-- <input [(ngModel)]="query" class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search for title" > -->
+                        <input type="text" [(ngModel)]="query" name="myserch" class="form-control form-control-lg form-control-borderless"
+                            type="search" placeholder="Search for title or autor">
+                    </div>
+                    <!--end of col-->
+                    <div class="col-auto">
+                        <button class="btn btn-lg btn-success" type="submit">Search</button>
+                    </div>
+                    <!--end of col-->
+                </div>
+            </form>
+        </div>
+        <!-- TODO: call modal form to upload new book -->
+        <!-- the button new doesn't work, now just call api service and have text in answer. to try if the service REST works -->
+        <div class="col-auto btnNewBook">
+            <button class="btn btn-lg btn-success" type="submit" (click)="addNewBook()" data-toggle="modal" data-target="#exampleModal">New
+                Book</button>
 
-<div class="row itemsBlock">
-  <div *ngFor="let item of book | serch: query"  class="col-md-4 col-sm-6 col-12 book">
-    <app-book [title]="item.title"
-        [autor]="item.autor"
-        [pubblication]="item.pubblication"
-        [trame]="item.trame"
-        [img]="item.img"
-        >
-    </app-book>
-  </div>
+            <!-- Modal TODO: create new book here -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            {{msgnewBook}}
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end modal for new -->
+        </div>
+
+        <!--end of col-->
+    </div>
 </div>
+<!-- end serch component -->
+
+<!-- show book -->
+<div class="row itemsBlock">
+    <div *ngFor="let item of book | serch: query" class="col-md-4 col-sm-6 col-12 book">
+        <app-book [title]="item.title" [autor]="item.autor" [pubblication]="item.pubblication" [trame]="item.trame"
+            [img]="item.img">
+        </app-book>
+    </div>
+</div>
+<!-- end books -->
+
+<!-- TODO: MISSING TO DEVELOP FUNCTION FOR LOAD LIMITED BOOK FOR ONE PAGE -->
+<!-- THIS IT WILL BE A CONTROL FOR LOAD MORE BOOKS -->
 <div class="container pagenavigation">
     <nav aria-label="Page navigation example">
         <ul class="pagination justify-content-center">
-          <li class="page-item disabled">
-            <a class="page-link" href="#" tabindex="-1">Previous</a>
-          </li>
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item">
-            <a class="page-link" href="#">Next</a>
-          </li>
+            <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1">Previous</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+            </li>
         </ul>
-      </nav>
-    
+    </nav>
 </div>
-  
+<!-- end pagenavigation -->

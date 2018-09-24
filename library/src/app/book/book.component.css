@@ -1,48 +1,50 @@
-.container{
+.container {
     font-family: 'Amatic SC', cursive;
     font-size: 20px;
 }
-h2{
+
+h2 {
     font-size: 30px;
 }
-/* Mobile */
 
+/* Mobile */
 @media (max-width: 767px) {
-	h1 {
-		font-size: 25px;
-	}
-	h2 {
-		font-size: 22px;
-	}
+    h1 {
+        font-size: 25px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
 }
 
-
-
-.imgbook{
+.imgbook {
     height: auto;
     width: 100%;
     padding: 10px;
     margin: auto;
 }
-.book{
+
+.book {
     border: 10px;
-    display:table;
+    display: table;
     margin-left: auto;
     margin-right: auto;
     margin-top: 7%;
     margin-bottom: 7%;
     text-align: center;
     box-shadow: 10px 10px 5px grey;
-    
+
 }
-.title{
+
+.title {
     text-align: center;
     margin-left: 20%;
     margin-right: 25%
-    
 }
-.infobook{
-    padding:10px;
+
+.infobook {
+    padding: 10px;
     margin-top: 3%;
     text-align: left;
 

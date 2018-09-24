@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import {SerchPipe} from '../serch.pipe';
+import { SerchPipe } from '../serch.pipe';
 import { FormsModule } from '@angular/forms';
 
 
@@ -16,8 +16,7 @@ export class BookComponent implements OnInit {
   @Input() pubblication: string;
   @Input() trame: string;
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit() {}
-
+  ngOnInit() { }
 }

@@ -11,6 +11,11 @@ export class ListBooksService {
   getBooks(): Observable<any> {
     return this.http.get('http://localhost:3000/books');
   }
+
+  addBooks(): Observable<any> {
+    return this.http.get('http://localhost:3000/books/new', { responseType: 'text' });
+  }
+
 }
 
 
