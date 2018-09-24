@@ -32,7 +32,7 @@ install node.js in your pc
 
 1. download the project extract file
 2. $ cd /exercise-Canoo-library ( inside main folder)
-3. $ npm intall
+3. $ npm install
 4. $ cd library (and now you shoud have /exercise-Canoo-library/library)
 5. $ npm install
 now your project is ready 
